@@ -1,6 +1,6 @@
 # learn-laravel-11-2024-03-13
 
-<video src="demo.mp4" controls></video>
+https://github.com/xuchunyang/learn-laravel-11-2024-03-13/assets/4550353/18e2f430-9c17-4c92-a31a-7849e558c774
 
 从头尝试下昨天刚发布的 Laravel 11。
 
