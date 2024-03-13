@@ -11,3 +11,21 @@
   - 之前没有用过 Laravel Broadcasting，还涉及到 Event、Queue 和 WebSocket，新概念比较多，不容易上手
   - 除非使用 Forge，否则自己第一次部署肯定麻烦
   - 本地试了下一个公共聊天室，比较顺利
+
+## 部署记录
+
+我的服务器使用 1Panel 管理，可以用使用 GitHub Action 实现后续自动部署。
+
+做些准备工作，方便调用：
+
+```bash
+DOMAIN="learn-laravel-11-2024-03-13.xuchunyang.cn"
+CONTAINER="1Panel-php8-ZaWZ"
+CONTAINER_WORKDIR="/www/sites/${DOMAIN}/index"
+
+DOCKER="sudo docker exec -it -w $CONTAINER_WORKDIR -u 1000:1000 $CONTAINER"
+COMPOSER="$DOCKER composer"
+ARTISAN="$DOCKER php artisan"
+```
+
+WebSocket + Docker 部署有难度，浏览器终于连上了，但是收不到 WebSocket 的通知，原因待调查。
